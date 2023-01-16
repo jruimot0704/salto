@@ -5,6 +5,13 @@ input.onButtonPressed(Button.A, function () {
     Personaje_abajo.change(LedSpriteProperty.Y, 1)
     Personaje_arriba.change(LedSpriteProperty.Y, 1)
 })
+input.onButtonPressed(Button.B, function () {
+    Personaje_arriba.change(LedSpriteProperty.X, -1)
+    Personaje_arriba.change(LedSpriteProperty.Y, 1)
+    basic.pause(500)
+    Personaje_arriba.change(LedSpriteProperty.X, 1)
+    Personaje_arriba.change(LedSpriteProperty.Y, -1)
+})
 let Personaje_arriba: game.LedSprite = null
 let Personaje_abajo: game.LedSprite = null
 Personaje_abajo = game.createSprite(1, 4)
